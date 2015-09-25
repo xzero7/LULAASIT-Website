@@ -1,0 +1,500 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>LULSIT</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/blue.css" rel="stylesheet" type="text/css" media="all" />
+<!----font-Awesome----->
+   	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+<!----font-Awesome----->
+<!-- start plugins -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!--start slider -->
+    <link rel="stylesheet" href="css/fwslider.css" media="all">
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/css3-mediaqueries.js"></script>
+    <script src="js/fwslider.js"></script>
+<!--end slider -->
+<!-- must have -->
+<link href="css/allinone_carousel.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+<script src="js/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
+<script src="js/allinone_carousel.js" type="text/javascript"></script>
+<!--[if IE]><script src="js/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
+<!-- must have -->
+	<script>
+		jQuery(function() {
+
+			jQuery('#allinone_carousel_charming').allinone_carousel({
+				skin: 'charming',
+				width: 990,
+				height: 454,
+				responsive:true,
+				autoPlay: 3,
+				resizeImages:true,
+				autoHideBottomNav:false,
+				showElementTitle:false,
+				verticalAdjustment:50,
+				showPreviewThumbs:false,
+				//easing:'easeOutBounce',
+				numberOfVisibleItems:5,
+				nextPrevMarginTop:23,
+				playMovieMarginTop:0,
+				bottomNavMarginBottom:-10
+			});		
+		});
+	</script>
+<!-- Owl Carousel Assets -->
+<link href="css/owl.carousel.css" rel="stylesheet">
+<script src="js/owl.carousel.js"></script>
+		<script>
+			$(document).ready(function() {
+
+				$("#owl-demo").owlCarousel({
+					items : 4,
+					lazyLoad : true,
+					autoPlay : true,
+					navigation : true,
+					navigationText : ["", ""],
+					rewindNav : false,
+					scrollPerPage : false,
+					pagination : false,
+					paginationNumbers : false,
+				});
+
+			});
+		</script>
+		<!-- //Owl Carousel Assets -->
+<!-- start circle -->
+<script>
+(function($){
+	$.fn.percentPie = function(options){
+
+		var settings = $.extend({
+			width: 100,
+			trackColor: "EEEEEE",
+			barColor: "E2534B",
+			barWeight: 30,
+			startPercent: 0,
+			endPercent: 1,
+			fps: 60
+		}, options);
+
+		this.css({
+			width: settings.width,
+			height: settings.width
+		});
+
+		var	that = this,
+			hoverPolice = false,
+			canvasWidth = settings.width,
+			canvasHeight = canvasWidth,
+			id = $('canvas').length,
+			canvasElement = $('<canvas id="'+ id +'" width="' + canvasWidth + '" height="' + canvasHeight + '"></canvas>'),
+			canvas = canvasElement.get(0).getContext("2d"),
+			centerX = canvasWidth/2,
+			centerY = canvasHeight/2,
+			radius = settings.width/2 - settings.barWeight/2;
+			counterClockwise = false,
+			fps = 1000 / settings.fps,
+			update = .01;
+			this.angle = settings.startPercent;
+
+		this.drawArc = function(startAngle, percentFilled, color){
+			var drawingArc = true;
+			canvas.beginPath();
+			canvas.arc(centerX, centerY, radius, (Math.PI/180)*(startAngle * 360 - 90), (Math.PI/180)*(percentFilled * 360 - 90), counterClockwise);
+			canvas.strokeStyle = color;
+			canvas.lineWidth = settings.barWeight;
+			canvas.stroke();
+			drawingArc = false;
+		}
+
+		this.fillChart = function(stop){
+			var loop = setInterval(function(){
+				hoverPolice = true;
+				canvas.clearRect(0, 0, canvasWidth, canvasHeight);
+
+				that.drawArc(0, 360, settings.trackColor);
+				that.angle += update;
+				that.drawArc(settings.startPercent, that.angle, settings.barColor);
+
+				if(that.angle > stop){
+					clearInterval(loop);
+					hoverPolice = false;
+				}
+			}, fps);
+		}
+
+		this.mouseover(function(){
+			if(hoverPolice == false){
+				that.angle = settings.startPercent;
+				that.fillChart(settings.endPercent);
+			}
+		});
+
+		this.fillChart(settings.endPercent);
+		this.append(canvasElement);
+		return this;
+	}
+}(jQuery));
+
+$(document).ready(function() {
+
+	$('.google').percentPie({
+		width: 100,
+		trackColor: "E2534B",
+		barColor: "6B4724",
+		barWeight: 20,
+		endPercent: .9,
+		fps: 60
+	});
+  
+  $('.moz').percentPie({
+		width: 100,
+		trackColor: "E2534B",
+		barColor: "6B4724",
+		barWeight: 20,
+		endPercent: .75,
+		fps: 60
+	});
+  
+  $('.safari').percentPie({
+		width: 100,
+		trackColor: "E2534B",
+		barColor: "#6B4724",
+		barWeight: 20,
+		endPercent: .5,
+		fps: 60
+	});
+    
+});
+</script>
+</head>
+<body>
+<div class="header_bg">
+<div class="container">
+	<div class="header">
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.png" alt=""/></a>
+		</div>
+		<div class="h_menu">
+		<a id="touch-menu" class="mobile-menu" href="#">Menu</a>
+		<nav>
+		<ul class="menu list-unstyled">
+			<li><a href="#">HISTORY</a>
+			<ul class="sub-menu list-unstyled">
+				<li><a href="http://www.launidadlatina.org/about-lul/history/story/#.VMgtxXLN-kA" target="_blank">National</a></li>
+				<li><a href="chapter_history.html">Chapter</a></li>
+			</ul>				
+			</li>
+			<li><a href="#">Hermanos</a>
+			<ul class="sub-menu list-unstyled">
+				<li><a href="alumni.html">Past Hermanos</a></li>
+				<li><a href="undergraduates.html">Undergraduates</a></li>
+			</ul>
+			</li>
+			<li><a href="#">Interested</a>
+			<ul class="sub-menu list-unstyled">
+				<li><a href="recent_news.html">Recent News</a></li>
+				<li><a href="mission_statement.html">What we do</a>
+				<ul class="list-unstyled">
+					<li><a href="interact.html">interact</a></li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+			<li><a href="faq.html">FAQs</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+		</ul>
+		</nav>
+		<script src="js/menu.js" type="text/javascript"></script>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+</div>
+    <div id="fwslider"><!-- start slider -->
+        <div class="slider_container">
+            <div class="slide"> 
+                <!-- Slide image -->
+                    <img src="images/slider1.jpg">
+                <!-- /Slide image -->
+                <!-- Texts container -->
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <!-- Text title -->
+                        <h4 class="title">A network that expands state lines</h4>
+                        <!-- /Text title -->
+                        <!-- Text description -->
+                        <p class="description">Our brotherhood doesn't end here at Stevens, it's so much more!</p>
+                        <!-- /Text description -->
+                    </div>
+                </div>
+                 <!-- /Texts container -->
+            </div>
+            <!-- /Duplicate to create more slides -->
+            <div class="slide">
+                <img src="images/slider2.jpg">
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <h4 class="title">Leaders like no other</h4>
+                        <p class="description">Need the skills to make it to the top? We have them, and we'll teach you how to be the best</p>
+                    </div>
+                </div>
+            </div>
+            <!--/slide -->
+        </div>
+        <div class="timers"></div>
+        <div class="slidePrev"><span></span></div>
+        <div class="slideNext"><span></span></div>
+    </div><!--/slider -->
+<div class="main_bg"><!-- start main -->
+<div class="container">
+	<div class="main_grid">
+		<div class="top_grid"><!-- start top_grid -->
+				<div class="col-md-10 span1_of_1">
+						<h3>Where we come from</h3>
+						<p>The Alpha Alpha Chapter was established in 1997 by 5 brothers who wished the expand the power of the fraternity to Stevens.</p>
+				</div>
+				<div class="col-md-2 span1_of_2">
+					<a class="btn" href="chapter_history.html">Read More</a>
+				</div>
+				<div class="clearfix"></div>
+		</div>
+		<div class="span_of_4"><!-- start span_of_4 -->
+			<div class="col-md-3 span1_of_4">
+				<div class="span4_of_list">
+					<span><i class="fa fa-trophy"></i></span>
+					<h3>Academic Exellence</h3>
+					<p>We understand the importance of getting that degree, and as an organization we strive to be the best. Everyone can suceed in the classroom and we have advanced programs to help you.</p>
+				</div>
+			</div>
+			<div class="col-md-3 span1_of_4">
+				<div class="span4_of_list">
+					<span><i class="fa fa-user"></i></span>
+					<h3>Brotherhood</h3>
+					<p>We don't just say brotherhood, we live it. You are not joining a group of guys, you are entering a family, and like a family, it doesn't end after graduation, it's a lifetime.</p>
+				</div>	
+			</div>
+			<div class="col-md-3 span1_of_4">
+				<div class="span4_of_list">
+					<span><i class="fa fa-desktop"></i></span>
+					<h3>Professionalism</h3>
+					<p>We know you need that job, so let us help you by providing with a national network of profesionals over a wide range career fields. Our Alum are ready and willingly to start you on your profesional journey.</p>	
+				</div>
+			</div>
+			<div class="col-md-3 span1_of_4">
+				<div class="span4_of_list">
+					<span><i class="fa fa-wheelchair"></i></span>
+					<h3>Community Service</h3>
+					<p>Once we have achieved sucess, there is one final step, and that is to help the next generation to follow on in our footsteps. But more importantly we must help those who have always been there for us.</p>						
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div><!-- end span_of_4 -->
+	</div>
+</div>
+</div>
+<div class="main1_bg"><!-- start main1 -->
+<div class="container">
+	<div class="main slider_text texxt-center">
+		<h4>Join a premiere group of Gentlemen.</h4>
+		<p>Where we beat the odds everyday</p>
+</div>
+</div>
+<!-- start banner -->
+<div id="bannerBg">
+<div id="containingDiv">
+            <div id="allinone_carousel_charming">
+            	<div class="myloader"></div>
+                <!-- CONTENT -->
+                <ul class="allinone_carousel_list">
+               		<li><img src="images/slider_pic1.jpg" alt="" class="img-responsive"/></li>
+                    <li><img src="images/slider_pic2.jpg" alt="" class="img-responsive"/></li>
+                    <li><img src="images/slider_pic3.jpg" alt="" class="img-responsive"/></li>
+                    <li><img src="images/slider_pic4.jpg" alt="" class="img-responsive"/></li>
+                    <li><img src="images/slider_pic5.jpg" alt="" class="img-responsive"/></li>
+                    <li><img src="images/slider_pic3.jpg" alt="" class="img-responsive"/></li>
+                    <li><img src="images/slider_pic4.jpg" alt="" class="img-responsive"/></li>
+                    <li><img src="images/slider_pic5.jpg" alt="" class="img-responsive"/></li>
+                      
+                </ul>    
+          </div>
+</div>
+</div>
+ <!-- end banner -->
+</div>
+<div class="main_btm"><!-- start main_btm -->
+<div class="container">
+	<div class="main span_of_3">
+		<div class="col-md-3 span1_of_3">
+			<h4>What can I gain?</h4>
+			<ul class="list-unstyled nav_list">
+				<li><a>Necessary colleagate skills to complete your education.</a></li>
+				<li><a>A support group that extends the 4 years of college.</a></li>
+				<li><a>Leadership experience and a venue to impact your campus.</a></li>
+				<li><a>Professional network that you need to get that next internship or job.</a></li>
+				<li><a>The ability to push yourself beyond your limits and excell in your passions.</a></li>
+			</ul>
+		</div>	
+		<div class="col-md-6 span1_of_3">
+			<h5>The brothers of LUL are strong believers that we shape our own destiny. What seperates us from the rest is <span>our ability to inspire greatness in others.</span> We have a remarkable work ethic that allows us to do the impossible, but more importantly create a unique family that we can return years after. We are <span>small</span>, <span>diverse</span>, and <span>tight knit</span>, but we are not <span>close minded</span> or <span>exclusive</span> and all we seek are for gentlemen intersted in us know the following.</h5>
+				<!-- start circle -->
+				<!-- end circle -->
+		</div>	
+		<div class="col-md-3 span1_of_3">
+			<h4>What do others say?</h4>
+			<div class="clients">
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos </p>
+			</div>
+			
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="cau_hide">
+	<div class="cursual"><!--  start cursual  -->
+		<h4>Here At Stevens<span class="line"></span></h4>
+	</div>
+	<div id="owl-demo" class="owl-carousel"><!----start-img-cursual---->
+		<div class="item">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="images/c1.png" alt="Lazy Owl Image">
+			</div>
+		</div>
+		<div class="item">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="images/c2.png" alt="Lazy Owl Image">
+			</div>
+		</div>
+		<div class="item">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="images/c3.png" alt="Lazy Owl Image">
+			</div>
+		</div>
+		<div class="item">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="images/c1.png" alt="Lazy Owl Image">
+			</div>
+		</div>
+		<div class="item">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="images/c2.png" alt="Lazy Owl Image">
+			</div>
+		</div>
+		<div class="item">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="images/c3.png" alt="Lazy Owl Image">
+			</div>
+		</div>
+		<div class="item">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="images/c1.png" alt="Lazy Owl Image">
+			</div>
+		</div>	
+		<div class="item">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="images/c4.png" alt="Lazy Owl Image">
+			</div>
+		</div>	
+		<div class="item">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="images/c1.png" alt="Lazy Owl Image">
+			</div>
+		</div>
+		<div class="item">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="images/c2.png" alt="Lazy Owl Image">
+			</div>
+		</div>
+		<div class="item">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="images/c3.png" alt="Lazy Owl Image">
+			</div>
+		</div>
+		<div class="item">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="images/c1.png" alt="Lazy Owl Image">
+			</div>
+		</div>
+		<div class="item">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="images/c2.png" alt="Lazy Owl Image">
+			</div>
+		</div>
+	</div><!----//End-img-cursual---->
+	</div>
+</div>
+</div>
+<div class="footer_bg"><!-- start footer -->
+<div class="container">
+	<div class="footer">
+		<div class="col-md-4 footer1_of_3">
+			<div class="f_logo">
+				<a href="index.html"><img src="images/logo.png" alt=""/></a>
+			</div>		
+			<p class="f_para">La Unidad Latina, Lambad Upsilon Fraternity Inc. is a Latino based national Greek Lettered Organization. We have been at the forefront of educational issues for men of color since 1982. If you wish to learn more about the organization as a whole or contact this local chapter please look at the following links.</p>
+			<p>National Website:&nbsp;<span><a href="http://www.launidadlatina.org/">launidadlatina.org</a></span></p>
+			<span class="">Email:&nbsp;<a href="mailto:lulaasit@gmail.com">lulaasit@gmail.com</a></span>
+		</div>
+
+		<div class="col-md-4 footer_of_3">
+			<h4>highlights from <span>Stevens</span></h4>
+			<div class="blog_list">
+				<div class="col-md-3 f_pic">
+					<a href="blog.html"><img src="images/blog_pic1.jpg" alt="" class="img-responsive"/></a>	
+				</div>
+				<div class="col-md-9 f_text">
+					<a href="blog.html"><p>Lorem Ipsum is simply dummy text of the this printing and typesetting industry.</p></a>
+					<span>26, may 2014</span>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="blog_list">
+				<div class="col-md-3 f_pic">
+					<a href="blog.html"><img src="images/blog_pic2.jpg" alt="" class="img-responsive"/></a>
+				</div>
+				<div class="col-md-9 f_text">
+					<a href="blog.html"><p>Lorem Ipsum is simply dummy text of the this printing and typesetting industry.</p></a>
+					<span>17, June 2014</span>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+</div>
+<div class="footer1_bg"><!-- start footer1 -->
+<div class="container">
+	<div class="footer1">
+		<div class="copy pull-left">
+			<p class="link"><span>&#169; All rights reserved | Template by&nbsp;<a href="http://w3layouts.com/"> W3Layouts</a></span></p>
+		</div>
+		<div class="soc_icons pull-right">
+			<span>Share you experience!</span>
+			<ul class="list-unstyled text-center">
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+				<li><a href="#"><i class="fa fa-rss"></i></a></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+</div>
+</body>
+</html>
