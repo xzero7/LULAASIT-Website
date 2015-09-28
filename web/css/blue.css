@@ -17,9 +17,9 @@ body {
 	font-size: 100%;
 }
 .header_bg{
-	/*background: #482002;*/
-	background:url('../images/lulbanner6.jpg');
-	background-size: cover;
+	background: #482002;
+/*	background:url('../images/lulsitebanner.jpg');
+	background-size: cover;*/
 }
 .header{
 	padding: 4% 0;
