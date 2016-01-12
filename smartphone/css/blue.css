@@ -109,7 +109,7 @@ nav{
 	display: none;
 	width: 100%;
 	padding: 12px;
-	background: #528B86;
+	background: #482002;
 	color: #ffffff;
 	text-transform: uppercase;
 	font-size: 16px;
@@ -601,7 +601,7 @@ nav{margin:0;background:none;}.menu li{display:block;margin:0;}.menu li a{backgr
 }
 h3.style{
 	text-transform: uppercase;
-	color: #62A09D;
+	color: #482002;
 	font-size: 24px;
 	margin: 5px 0 0;
 }
@@ -615,7 +615,7 @@ h3.style{
 }
 .breadcrumb li,.breadcrumb li a{
 	font-size: 14px;
-	color: #62A09D;
+	color: #482002;
 	text-transform:capitalize;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -657,7 +657,7 @@ h3.style{
 }
 .pricing2 h5 {
 	text-transform: uppercase;
-	color: #62A09D;
+	color: #482002;
 	font-size: 34px;
 	margin-bottom: 2%;
 	font-weight: 600;

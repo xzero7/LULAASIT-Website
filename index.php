@@ -7,14 +7,10 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
  *
  */
-include "app/config.php";
-include "app/detect.php";
+// include "app/config.php";
+// include "app/detect.php";
 
-echo $browser_t;
-echo '<BR>';
-echo $page_name;
-
-header("Location: ".$browser_t."/index.html");
+//header("Location: ".$browser_t."/index.html");
 
 
 // if ($page_name=='') {
